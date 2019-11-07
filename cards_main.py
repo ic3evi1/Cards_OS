@@ -1,11 +1,11 @@
 #TODO(ic3evi1) 名片管理系统【练习版】
-
+import cards_tools
 #主程序无限循环，用户输入0时，执行退出
 while True:
     #TODO(ic3evi1) 显示功能选项
+    cards_tools.show_menu()
     action_str = input("请选择操作功能：")
-    print("您选择的功能是： %s " % action_str)
-
+    print("您选择的功能是：%s " % action_str)
     #针对 1、2、3输入的操作功能
     if action_str in ["1","2","3"]:
         #代码未完成，用pass站位保证程序能够运行
