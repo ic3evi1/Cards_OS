@@ -2,13 +2,23 @@
 
 #主程序无限循环，用户输入0时，执行退出
 while True:
+    #TODO(ic3evi1) 显示功能选项
     action_str = input("请选择操作功能：")
     print("您选择的功能是： %s " % action_str)
 
     #针对 1、2、3输入的操作功能
     if action_str in ["1","2","3"]:
         #代码未完成，用pass站位保证程序能够运行
-        pass
+        # 1.新建名片
+        if action_str == "1":
+            pass
+        # 2.显示全部
+        elif action_str == "2":
+            pass
+        # 3.查询名片
+        else:
+            pass
+
 
     #用户输入0，退出程序
     elif action_str == "0":
