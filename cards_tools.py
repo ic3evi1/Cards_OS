@@ -1,3 +1,5 @@
+#所有名片列表变量
+card_list = []
 
 def show_menu():
     """显示系统菜单"""
