@@ -6,21 +6,22 @@ while True:
     cards_tools.show_menu()
     action_str = input("请选择操作功能：")
     print("您选择的功能是：%s " % action_str)
-    #针对 1、2、3输入的操作功能
+
+    #TODO(ic3evi1) 针对 1、2、3输入的操作功能
     if action_str in ["1","2","3"]:
         #代码未完成，用pass站位保证程序能够运行
         # 1.新建名片
         if action_str == "1":
-            pass
+            cards_tools.new_card()
         # 2.显示全部
         elif action_str == "2":
-            pass
         # 3.查询名片
+            cards_tools.search_card()
         else:
-            pass
+            cards_tools.show_all()
 
 
-    #用户输入0，退出程序
+    #TODO(ic3evi1) 用户输入0，退出程序
     elif action_str == "0":
         print("欢迎下次使用[名片管理系统]！")
         break
