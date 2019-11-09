@@ -15,11 +15,10 @@ while True:
             cards_tools.new_card()
         # 2.显示全部
         elif action_str == "2":
-        # 3.查询名片
-            cards_tools.search_card()
-        else:
             cards_tools.show_all()
-
+        # 3.查询名片
+        else:
+            cards_tools.search_card()
 
     #TODO(ic3evi1) 用户输入0，退出程序
     elif action_str == "0":
