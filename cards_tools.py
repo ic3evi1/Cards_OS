@@ -34,9 +34,17 @@ def new_card():
 
     # 3.把用户的字典添加到名片列表里
     card_list.append(card_dict)
-    print(card_list)
+    #print(card_list)
     # 4.提示用户信息添加成功
     print("%s 的名片信息添加成功" % name_str)
+    print("姓名\t\t电话\t\tQQ\t\t邮箱")
+    print("-" * 50)
+    print("%s\t\t%s\t\t%s\t\t%s" % (
+        card_dict["name"],
+        card_dict["phone"],
+        card_dict["qq"],
+        card_dict["mail"]
+    ))
 
 def show_all():
     """显示所有名片"""
@@ -66,3 +74,20 @@ def search_card():
     """搜索名片"""
     print("-" * 50)
     print("搜索名片")
+    #提示用户输入要搜索的用户姓名
+    find_name = input("请输入要查找名片的姓名：")
+
+    #遍历字典，查找用户，找到输出名片信息，没找到，提示用户
+    for card_dict in card_list:
+        if card_dict["name"] == find_name:
+            print("姓名\t\t电话\t\tQQ\t\t邮箱")
+            print("-"*50)
+            print("%s\t\t%s\t\t%s\t\t%s" % (
+                card_dict["name"],
+                card_dict["phone"],
+                card_dict["qq"],
+                card_dict["mail"]
+            ))
+            break
+    else:
+        print("没有找到 %s" % find_name)
