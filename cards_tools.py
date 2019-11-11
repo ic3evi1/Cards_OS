@@ -90,11 +90,30 @@ def search_card():
             ))
             deal_card(card_dict)
             break
-        #TODO(ic3evi1) 针对查找到名片信息修改、删除操作
 
     else:
         print("没有找到 %s" % find_name)
 
 def deal_card(find_dict):
-    print(find_dict)
-    action_str = input("提示用户操作")
+    action_str = input("请选择要执行的操作"
+                       "【1】删除用户 【2】修改用户 "
+                       "【0】返回上级菜单：")
+    if action_str == "1":
+        card_list.remove(find_dict)
+        print("%s 的名片删除成功" % find_dict["name"])
+
+    elif action_str == "2":
+        find_dict["name"] = input_card_info(find_dict["name"],"姓名：")
+        find_dict["phone"] = input_card_info( find_dict["phone"] ,"电话：")
+        find_dict["qq"] = input_card_info(find_dict["qq"],"QQ：")
+        find_dict["mail"] = input_card_info(find_dict["mail"],"邮箱：")
+        print("%s 的名片修改完毕" % find_dict["name"])
+
+
+def input_card_info(card_value,tip_message):
+    input_str = input(tip_message)
+
+    if len(input_str) > 0:
+        return input_str
+    else:
+        return card_value
