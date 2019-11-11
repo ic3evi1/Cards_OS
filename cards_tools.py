@@ -88,7 +88,13 @@ def search_card():
                 card_dict["qq"],
                 card_dict["mail"]
             ))
+            deal_card(card_dict)
             break
         #TODO(ic3evi1) 针对查找到名片信息修改、删除操作
+
     else:
         print("没有找到 %s" % find_name)
+
+def deal_card(find_dict):
+    print(find_dict)
+    action_str = input("提示用户操作")
